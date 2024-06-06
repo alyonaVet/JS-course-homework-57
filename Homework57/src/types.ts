@@ -5,3 +5,10 @@ export interface User {
   isActive: boolean;
   role: string;
 }
+
+export interface UserFormData {
+  name: string;
+  email: string;
+  isActive: boolean;
+  role: string;
+}
