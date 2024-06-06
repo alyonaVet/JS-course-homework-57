@@ -35,12 +35,7 @@ const UserForm: React.FC<UserDataProps> = ({onSubmit}) => {
       id: Math.random().toString(),
       ...userFormData
     });
-    setUserFormData({
-      name: '',
-      email: '',
-      isActive: false,
-      role: '',
-    });
+    setUserFormData(initialState);
   };
 
   return (
@@ -70,8 +65,7 @@ const UserForm: React.FC<UserDataProps> = ({onSubmit}) => {
           value={userFormData.email}
         />
       </div>
-      <div className="form-group">
-        <label className="form-check-label mb-2 mt-2" htmlFor="role">Select your role</label>
+      <div className="form-group mb-2 mt-3">
         <select
           name="role"
           id="role"
@@ -80,6 +74,7 @@ const UserForm: React.FC<UserDataProps> = ({onSubmit}) => {
           required
           value={userFormData.role}
         >
+          <option value="">Select role</option>
           <option value="user">User</option>
           <option value="editor">Editor</option>
           <option value="admin">Admin</option>
@@ -94,7 +89,6 @@ const UserForm: React.FC<UserDataProps> = ({onSubmit}) => {
           className="form-check-input"
           onChange={changeIsActive}
           checked={userFormData.isActive}
-          required
         />
       </div>
       <button type="submit" className="btn btn-primary mt-3">Create</button>
