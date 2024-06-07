@@ -7,9 +7,9 @@ import {User} from './types';
 const App = () => {
 
   const [users, setUsers] = useState<User[]>([
-    {id: '1', name: 'John', email: 'john.@gmail.com', role: 'Admin', isActive: true},
+    {id: '1', name: 'John', email: 'john.@gmail.com', role: 'admin', isActive: true},
     {id: '2', name: 'Kate', email: 'kate.@gmail.com', role: 'editor', isActive: false},
-    {id: '3', name: 'Alex', email: 'alex.@gmail.com', role: 'User', isActive: true},
+    {id: '3', name: 'Alex', email: 'alex.@gmail.com', role: 'user', isActive: true},
   ]);
 
   const addUser = (user: User) => {

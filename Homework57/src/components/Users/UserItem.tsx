@@ -1,10 +1,10 @@
 import {User} from '../../types';
 import React from 'react';
 
-interface useItemProps {
+interface userItemProps {
   user: User;
 }
-const UserItem: React.FC<useItemProps> = ({user}) => {
+const UserItem: React.FC<userItemProps> = ({user}) => {
   return (
     <li className="list-group-item d-flex justify-content-between align-items-start">
       <div className="ms-2 me-auto">
